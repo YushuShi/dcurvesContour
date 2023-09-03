@@ -1,0 +1,13 @@
+Package: dcurvesContour
+Type: Package
+Title: Plot DCA for survival data in contour plot
+Version: 0.1.0
+Author: Yushu Shi
+Maintainer: Yushu Shi <shiyushu2006@gmail.com>
+Description: Plot DCA for survival data in contour plot.
+Depends: survival
+Imports: dcurves, plotly
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+License: MIT + file LICENSE
