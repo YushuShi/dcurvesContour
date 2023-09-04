@@ -34,10 +34,11 @@ library(dplyr)
 library(dcurves)
 library(survival)
 library(plotly)
+library(dcurvesContour)
 df_time_to_cancer_dx <-
   readr::read_csv(
     file = "https://raw.githubusercontent.com/ddsjoberg/dca-tutorial/main/data/df_time_to_cancer_dx.csv"
-  ) \%>\%
+  ) %>%
   labelled::set_variable_labels(
     patientid = "Patient ID",
     cancer = "Cancer Diagnosis",
