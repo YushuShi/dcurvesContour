@@ -38,12 +38,12 @@
 #' quantile(df_time_to_cancer_dx$ttcancer,0.9),length.out=21)
 #' thresSeq<-seq(0, 0.5, 0.01)
 #'
-#' tempPlot<-DCAcontour(df_time_to_cancer_dx,time,thresSeq,
+#' tempPlot<-dcaContour(df_time_to_cancer_dx,time,thresSeq,
 #' coxmod,"Compare with All")
 #' tempPlot
 #' coxmod2 <- coxph(Surv(ttcancer, cancer) ~ age,
 #' data = df_time_to_cancer_dx)
-#' tempPlot2<-DCAcontour(df_time_to_cancer_dx,time,thresSeq,
+#' tempPlot2<-dcaContour(df_time_to_cancer_dx,time,thresSeq,
 #' coxmod,"Compare two models",coxmod2)
 #' tempPlot2
 #'
@@ -53,7 +53,7 @@
 #'
 #' @export
 
-DCAcontour<-function(data,time,threshold,model,option=NULL,model2=NULL){
+dcaContour<-function(data,time,threshold,model,option=NULL,model2=NULL){
   treatAllMat<-matrix(NA,ncol=length(time),nrow=length(threshold))
   treatNoneMat<-matrix(NA,ncol=length(time),nrow=length(threshold))
   treatModelMat<-matrix(NA,ncol=length(time),nrow=length(threshold))
