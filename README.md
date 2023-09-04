@@ -59,12 +59,12 @@ time<-seq(min(df_time_to_cancer_dx$ttcancer),
 quantile(df_time_to_cancer_dx$ttcancer,0.9),length.out=21)
 thresSeq<-seq(0, 0.5, 0.01)
 
-tempPlot<-DCAcontour(df_time_to_cancer_dx,time,thresSeq,
+tempPlot<-dcaContour(df_time_to_cancer_dx,time,thresSeq,
 coxmod,"Compare with All")
 tempPlot
 coxmod2 <- coxph(Surv(ttcancer, cancer) ~ age,
 data = df_time_to_cancer_dx)
-tempPlot2<-DCAcontour(df_time_to_cancer_dx,time,thresSeq,
+tempPlot2<-dcaContour(df_time_to_cancer_dx,time,thresSeq,
 coxmod,"Compare two models",coxmod2)
 tempPlot2
 
